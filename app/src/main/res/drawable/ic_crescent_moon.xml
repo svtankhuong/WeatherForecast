@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="30"
+    android:viewportHeight="30"
+    tools:ignore="MissingDefaultResource">
+
+    <group
+        android:pivotX="12.38"
+        android:pivotY="15"
+        android:rotation="-45"
+        android:translateX="1.5"
+        android:translateY="1.0">
+
+        <path
+            android:fillColor="#FFF9C4"
+            android:pathData="M 24,7 A 10,10 0 1,0 24,23 A 13,13 0 1,1 24,7 Z" />
+    </group>
+</vector>

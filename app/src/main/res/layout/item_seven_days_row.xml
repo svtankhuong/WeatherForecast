@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="14dp"
+    android:paddingHorizontal="16dp">
+
+    <TextView
+        android:id="@+id/tvDayName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        tools:text="Hôm nay"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutRain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@id/tvDayName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/imgRainIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/stat_rain_pop"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tvRainProbRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            tools:text="6%"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgIconRow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        tools:src="@drawable/ic_sunny"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/layoutRain"
+        app:layout_constraintEnd_toStartOf="@+id/imgIconLowRow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgIconLowRow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        tools:src="@drawable/ic_full_moon"
+        app:layout_constraintStart_toEndOf="@id/imgIconRow"
+        app:layout_constraintEnd_toStartOf="@id/tvTempRange"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTempRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="36°  24°"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
